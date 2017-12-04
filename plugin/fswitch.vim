@@ -336,14 +336,14 @@ endfunction
 augroup fswitch_au_group
     au!
     au BufEnter *.c    call s:SetVariables('h',       'h,hpp', 'reg:|.*|\*\*|')
-    au BufEnter *.cc   call s:SetVariables('hh',      'h,hpp', 'reg:|.*|\*\*|')
+    au BufEnter *.cc   call s:SetVariables('h,hh,hpp','h,hpp', 'reg:|.*|\*\*|')
     au BufEnter *.cpp  call s:SetVariables('hpp,h',   'h,hpp', 'reg:|.*|\*\*|')
     au BufEnter *.cxx  call s:SetVariables('hxx',     'h,hpp', 'reg:|.*|\*\*|')
     au BufEnter *.C    call s:SetVariables('H',       'h,hpp', 'reg:|.*|\*\*|')
     au BufEnter *.m    call s:SetVariables('h',       'h,hpp', 'reg:|.*|\*\*|')
-    au BufEnter *.h    call s:SetVariables('c,cpp,m', 'h,hpp', 'reg:|.*|\*\*|')
+    au BufEnter *.h    call s:SetVariables('c,cpp,m,cc','h,hpp','reg:|.*|\*\*|')
     au BufEnter *.hh   call s:SetVariables('cc',      'h,hpp', 'reg:|.*|\*\*|')
-    au BufEnter *.hpp  call s:SetVariables('cpp',     'h,hpp', 'reg:|.*|\*\*|')
+    au BufEnter *.hpp  call s:SetVariables('cpp,cc',  'h,hpp', 'reg:|.*|\*\*|')
     au BufEnter *.hxx  call s:SetVariables('cxx',     'h,hpp', 'reg:|.*|\*\*|')
     au BufEnter *.H    call s:SetVariables('C',       'h,hpp', 'reg:|.*|\*\*|')
 augroup END
